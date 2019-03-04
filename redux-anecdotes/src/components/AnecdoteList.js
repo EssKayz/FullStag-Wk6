@@ -8,7 +8,7 @@ const Anecdotes = ({ store }) => {
         store.dispatch(voteFor(id))
     }
 
-    const list = store.getState().map(anecdote =>
+    const list = store.getState().anecdotes.map(anecdote =>
         <div key={anecdote.id}>
             <div>
                 {anecdote.content}
