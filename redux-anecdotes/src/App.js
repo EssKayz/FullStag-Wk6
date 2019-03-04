@@ -6,11 +6,10 @@ import Notification from './components/Notification'
 const App = (props) => {
   return (
     <div>
-      <h2>Anecdotes</h2>
-      <AnecdoteForm store={props.store} />
-      <br/>
-      <AnecdoteList store={props.store} />
-      <Notification store={props.store}/>
+      <h1>Programming anecdotes</h1>
+      <Notification />
+      <AnecdoteForm />
+      <AnecdoteList />
     </div>
   )
 }

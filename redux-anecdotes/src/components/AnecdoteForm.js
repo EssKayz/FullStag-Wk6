@@ -1,11 +1,12 @@
 import React from 'react';
 import { createAnecdote } from '../reducers/anecdoteReducer'
+import { connect } from 'react-redux'
 
 const NewAnecdote = (props) => {
 
     const addAnecdote = (event) => {
         event.preventDefault()
-        props.store.dispatch(createAnecdote(event.target.anecdote.value))
+        props.createAnecdote(event.target.anecdote.value)
         event.target.anecdote.value = ''
     }
 
@@ -21,4 +22,6 @@ const NewAnecdote = (props) => {
     )
 }
 
-export default NewAnecdote
+const connectedAddink = connect(null, { createAnecdote })(NewAnecdote)
+
+export default connectedAddink
